@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    outline: none;
+}
+
+
+body{
+    background: #00A7E1;
+}
+
+
+.logo-conversor{
+    display: block;
+    width: 220px;
+    margin: 15px auto;
+}
+
+
+main{
+    width: 375px;
+    height: 712px;
+    background: #F4F4F4;
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 35px 24px 23px;
+}
+
+
+label{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #777777;
+}
+
+
+select, input{
+    width: 100%;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid #BBBBBB;
+    margin-bottom: 24px;
+    appearance: none;
+    padding-left: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #555555;
+    cursor: pointer;
+}
+
+
+button{
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    background: #00A7E1;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+
+button:hover{
+    box-shadow: 2px 8px 8px 0px #00000040;    
+}
+
+button:active{
+    opacity: 0.6;
+}
+
+
+#section-moedas{
+    width: 100%;
+    height: 276px;
+    border: 1px solid #00A7E1;
+    border-radius: 20px;
+    padding: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+#arrow{
+    width: 35px;
+    margin: 15px 0;
+}
+
+
+.moedas-valores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+
+.nome-moeda{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #777777;
+}
+
+
+.valor-moeda{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #555555;
+}
+
+
+
+/* Extra 
+
+mudar cor ao clicar no botão de trocar cor
+*/
+
+
+

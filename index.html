@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor de Moedas</title>
+</head>
+
+<body>
+    <img src="./assets/coin-flip.gif" alt="gif de uma moeda girando" class="logo-conversor">
+
+    <main>
+
+        <label for="converter-de">Converter <b>de</b></label>
+
+        <select name="converter-de" id="converter-de">
+            <option value="">R$ Real Brasileiro</option>
+        </select>
+
+        <label for="converter-para">Converter <b>para</b></label>
+
+        <select name="converter-para" id="converter-para">
+            <option value="dolar">US$ Dólar Americado</option>
+            <option value="euro">€ Euro </option>
+            <option value="bitcoin">Bitcoin</option>
+        </select>
+
+        <label for="valor-a-converter">Valor</label>
+        <input id="valor-a-converter" placeholder="R$ 100.00">
+
+        <button id="button-converter">Converter</button>
+
+        <section id="section-moedas">
+            <div class="moedas-valores">
+                <img src="./assets/moeda-real.svg" alt="bandeira representando a moeda a ser convertida" id="bandeira-moeda-original">
+                <p class="nome-moeda nome-moeda-original">Real</p>
+                <p class="valor-moeda valor-original">R$ 0</p>
+            </div>
+
+            <img id="arrow" src="./assets/arrow-down.svg" alt="seta apontando para baixo">
+
+            <div class="moedas-valores">
+                <img src="./assets/moeda-dolar.svg" alt="bandeira representando a moeda convertida" id="bandeira-moeda-convertida">
+                <p class="nome-moeda nome-moeda-convertido">Dólar</p>
+                <p class="valor-moeda valor-convertido">$ 0</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
