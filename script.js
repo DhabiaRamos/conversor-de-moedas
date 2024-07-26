@@ -10,21 +10,17 @@ let pValorConvertido = document.querySelector(".valor-convertido")
 
 botaoConverter.addEventListener("click", converterMoedas)
 
-function converterMoedas() {
+async function converterMoedas() {
 
     const inputValor = document.querySelector("#valor-a-converter").value
 
-    console.log(selectConverterMoeda.value)
+    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(res => res.json())
 
-    // Valores das moedas do dia 19/02/24
+    const valorAtualDolar = data.USDBRL.high
+    const valorAtualEuro = data.EURBRL.high
+    const valorAtualBitcoin = data.BTCBRL.high
 
-    const valorAtualDolar = 4.96
-    const valorAtualEuro = 5.35
-    const valorAtualBitcoin = 257015.52
-
-
-
-    pValorOriginal.textContent = new Intl.NumberFormat("pt-BR", {
+    pValorOriginal.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency",
         currency: "BRL"
     }).format(inputValor)
@@ -32,7 +28,7 @@ function converterMoedas() {
 
     if (selectConverterMoeda.value == "dolar") {
 
-        pValorConvertido.textContent = new Intl.NumberFormat("en-US", {
+        pValorConvertido.innerHTML = new Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD"
         }).format(inputValor / valorAtualDolar)
@@ -40,14 +36,14 @@ function converterMoedas() {
     }
 
     if (selectConverterMoeda.value == "euro") {
-        pValorConvertido.textContent = new Intl.NumberFormat("de-DE", {
+        pValorConvertido.innerHTML = new Intl.NumberFormat("de-DE", {
             style: "currency",
             currency: "EUR"
         }).format(inputValor / valorAtualEuro)
     }
 
     if (selectConverterMoeda.value == "bitcoin") {
-        pValorConvertido.textContent = new Intl.NumberFormat("de-DE", {
+        pValorConvertido.innerHTML = new Intl.NumberFormat("de-DE", {
             style: "currency",
             currency: "BTC",
             minimumFractionDigits: 6,
